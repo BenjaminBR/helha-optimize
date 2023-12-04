@@ -1,0 +1,4 @@
+<select (change)="selectUser($event.target)" class="form-select" aria-label="Default select example">
+  <option value="-1" selected>Select User</option>
+  <option *ngFor="let user of users" value="{{user.id}}">{{user.username}}</option>
+</select>

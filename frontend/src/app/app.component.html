@@ -1,0 +1,7 @@
+<app-header></app-header>
+<main class="flex-shrink-0">
+  <div class="container">
+    <app-user-selection (userSelected)="this.userSelected = $event"></app-user-selection>
+    <app-user-details [user]="userSelected"></app-user-details>
+  </div>
+</main>

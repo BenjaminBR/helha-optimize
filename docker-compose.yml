@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db_big_dataset:
+    image: postgres:16-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=helha
+    volumes:
+      - ./volumes/postgresql/data:/var/lib/postgresql/data
+
+  db_small_dataset:
+    image: postgres:16-alpine
+    ports:
+      - 5442:5432
+    environment:
+      - POSTGRES_PASSWORD=helha
+    volumes:
+      - ./volumes/postgresql2/data:/var/lib/postgresql/data
